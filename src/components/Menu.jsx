@@ -1,6 +1,4 @@
 import React from 'react'
-import Edit from '../img/edit.png'
-import Delete from '../img/delete.png'
 
 const posts = [
   {
@@ -29,25 +27,10 @@ const posts = [
   },
 ];
 
-const Single = () => {
+const Menu = () => {
   return (
-    <div className='single'>
-      <div className='content'>
-      <img src='' alt=''/>
-      <div className='user'>
-        <img src='' alt=''/>
-        <div className='info'>
-        <span>John</span>
-        <p>Postted 2 aogs</p>
-      </div>
-      <div className='edit'>
-        <img src={Edit} alt='' />
-        <img src={Delete} alt='' />
-      </div>
-      </div>
-      </div>
-      <div className='menu'>
-      <h1>Other posts you may</h1>
+    <div className='menu'>
+        <h1>Other posts you may</h1>
         {posts.map(post=>(
           <div className='post' key={post.id}>
             <img src={post.img} alt="" />
@@ -55,9 +38,8 @@ const Single = () => {
             <button>Read More</button>
          </div>
         ))}
-        </div>  
     </div>
   )
 }
 
-export default Single
+export default Menu
